@@ -1,0 +1,258 @@
+/* --- Global Styles --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* --- Navigation --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #33057c; /* Purple shade */
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar ul li {
+    margin-left: 30px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #444;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #33057c;
+}
+
+/* --- Hero Section --- */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 10%;
+    min-height: 85vh;
+    background: linear-gradient(135deg, #100644 0%, #3838a4 100%);
+    color: white;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero-text h3 {
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.hero-text p {
+    font-style: italic;
+    margin-bottom: 30px;
+    max-width: 500px;
+    font-size: 1.1rem;
+}
+
+/* Hero Buttons */
+.buttons {
+    margin-bottom: 30px;
+}
+
+.btn {
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    margin-right: 15px;
+    background: white;
+    color: #33057c;
+    transition: 0.3s;
+}
+
+.btn.outline {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Social Icons */
+.social {
+    font-size: 1.8rem;
+}
+
+.social a {
+    color: white;
+    margin-right: 20px;
+    transition: 0.3s;
+    opacity: 0.8;
+}
+
+.social a:hover {
+    opacity: 1;
+}
+
+/* Profile Image */
+.hero-img {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hero-img img {
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    border: 10px solid rgba(255, 255, 255, 0.2);
+    object-fit: cover;
+}
+
+/* --- Sections General --- */
+.section {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+}
+
+.section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #33057c;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* --- Education & Experience Cards --- */
+.max-w-2xl, .experience-card {
+    background: white;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    text-align: left;
+    display: flex;
+    gap: 20px;
+    transition: 0.3s;
+}
+
+.experience-card:hover, .max-w-2xl:hover {
+    transform: translateY(-5px);
+}
+
+.job-title, .company {
+    color: #2d3436;
+    margin-bottom: 5px;
+}
+
+.dates {
+    color: #33057c;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* --- Skills Tags --- */
+.skill-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.skill-box span {
+    background: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    color: #555;
+    border-bottom: 3px solid #33057c;
+}
+
+/* --- Projects Grid --- */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.project-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: left;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border-top: 5px solid #33057c;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+    .navbar ul {
+        margin-top: 15px;
+    }
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding-top: 40px;
+    }
+    .hero-img img {
+        width: 250px;
+        height: 250px;
+        margin-bottom: 30px;
+    }
+    .hero-text h1 {
+        font-size: 2.2rem;
+    }
+    .hero-text p {
+        margin: 0 auto 30px;
+    }
+}
